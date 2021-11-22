@@ -9,11 +9,22 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
+app.post("/", (req,res) => {
+  let users = {
+    "fullName":req.body.fullname,
+    "aboutMe":req.body.about,
+    "githubUrl":req.body.github,
+    "twitterUrl":req.body.twitter,
+    "favoriteBooks":req.body.books.split(","),
+    "favoriteArtists":req.body.artists.split(",")
+  };
+  fs.readFile("./database.json", "UTF-8")
+  .then((content)=> JSON.parse(content))
+  .then((obj)=> console.log(obj.users))
+  .catch((err) => console.log(err))
+})
+
 app.get("/", (req, res) => {
-  // fs.readFile("./database.json", "utf8")
-  // .then((content)=> JSON.parse(content))
-  // .then((obj)=> console.log(obj.users))
-  // .catch((err) => console.log(err))
    res.render("createcard");
 });
 
