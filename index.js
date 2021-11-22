@@ -17,6 +17,10 @@ app.get("/", (req, res) => {
    res.render("createcard");
 });
 
+app.get("/homepage", (req, res) => {
+  res.render("homepage");
+});
+
 app.get("/people/:id", (req, res) => {
   res.render("people");
 });
