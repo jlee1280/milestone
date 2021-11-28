@@ -7,57 +7,68 @@
       <link rel="stylesheet" href=/public/create.css>
       <title>Document</title>
    </head>
-   <body>
-      <h1>Create your DevCard</h1>
-      <div class="form-group">
-         <input type="name" name="name" class="form-control" placeholder="Your Full Name">
-      </div>
-      <br>
-      <div class="form-group">
-         <input type="aboutme" name="aboutme" class="form-control" placeholder="About me">
-      </div>
-      <p>Technologies you Know:</p>
-      <div>
-         <input type="checkbox" id="html" name="html">
-         <label for="html">HTML</label>
-      </div>
-      <div>
-         <input type="checkbox" id="css" name="css">
-         <label for="css">CSS</label>
-      </div>
-      <div>
-         <input type="checkbox" id="js" name="js">
-         <label for="js">JS</label>
-      </div>
-      <div>
-         <input type="checkbox" id="git" name="git">
-         <label for="git">Git</label>
-      </div>
-      <div>
-         <input type="checkbox" id="react" name="react">
-         <label for="react">React</label>
-      </div>
-      <div>
-         <input type="checkbox" id="node" name="node">
-         <label for="node">Node.js</label>
-      </div>
-      <br>
-      <div class="form-group">
-         <input type="github" name="github" class="form-control" placeholder="Github URL">
-      </div>
-      <br>
-      <div class="form-group">
-         <input type="twitter" name="twitter" class="form-control" placeholder="Twitter URL">
-      </div>
-      <br>
-      <div class="form-group">
-         <input type="books" name="books" class="form-control" placeholder="Favourite Books (Separate by comma)">
-      </div>
-      <br>
-      <div class="form-group">
-         <input type="artists" name="artists" class="form-control" placeholder="Favourite Artists (Separate by comma)">
-      </div>
-      <br>
-      <button type="submit" class="btn btn-primary">Create Site</button>
-   </body>
+   <h1>Create Your Dev Card</h1>
+   <form action="" method="POST">
+     <div class="form">
+       <label for="full name">Your Full Name</label><br>
+       <input 
+       type="text"
+       name="fullname"
+       placeholder="Your Full Name"
+       />
+     <div class="form">
+       <label for="about">About me</label><br>
+       <input 
+       type="text"
+       name="about"
+       placeholder="About Me"
+       />
+     <div class="checkbox">
+       <p>Technologies you know</p>
+       <input type="checkbox" name="HTML" value="HTML">
+       <label for="HTML">HTML</label><br>
+       <input type="checkbox" name="CSS" value="CSS">
+       <label for="CSS">CSS</label><br>
+       <input type="checkbox" name="JS" value="JS">
+       <label for="JS">JS</label><br>
+       <input type="checkbox" name="Git" value="Git">
+       <label for="Git">Git</label><br>
+       <input type="checkbox" name="React" value="React">
+       <label for="React">React</label><br>
+       <input type="checkbox" name="Nodejs" value="Nodejs">
+       <label for="Nodejs">Node.Js</label><br>
+
+     <div class="form">
+       <label for="github">GitHub URL</label><br>
+       <input 
+       type="text"
+       name="github"
+       placeholder="GitHub URL"
+       />
+     <div class="form">
+       <label for="twitter">Twitter URL</label><br>
+       <input 
+       type="text"
+       name="twitter"
+       placeholder="Twitter URL"
+       />
+     <div class="form">
+       <label for="books">Favourite Books</label><br>
+       <input 
+       type="text"
+       name="books"
+       placeholder="Favourite Books (Sepearate by comma)"
+       />
+     <div class="form">
+       <label for="artists">Favourite Artists</label><br>
+       <input 
+       type="text"
+       name="artists"
+       placeholder="Favourite Artists (Sepearate by comma)"
+       />
+
+     <div class="button">
+       <button type="submit" class="submit">Create Site</button>
+   </form>
+
 </html>
