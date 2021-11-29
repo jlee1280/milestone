@@ -86,9 +86,9 @@ fs.createReadStream(filePath)
         var idx = (this.width * y + x) << 2;
 
         // invert color
-        this.data[idx] = 255 - this.data[idx];
-        this.data[idx + 1] = 255 - this.data[idx + 1];
-        this.data[idx + 2] = 255 - this.data[idx + 2];
+        this.data[idx] = 0.3 * this.data[idx] + 0.59 * this.data[idx + 1] + 0.11 * this.data[idx + 2] ;
+        this.data[idx + 1] = this.data[idx];
+        this.data[idx + 2] = this.data[idx];
 
         // this.data[idx + 3] = this.data[idx + 3] >> 1; # ignored
       }
