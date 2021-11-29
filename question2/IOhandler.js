@@ -89,8 +89,8 @@ fs.createReadStream(filePath)
         this.data[idx] = 255 - this.data[idx];
         this.data[idx + 1] = 255 - this.data[idx + 1];
         this.data[idx + 2] = 255 - this.data[idx + 2];
-        // and reduce opacity
-        this.data[idx + 3] = this.data[idx + 3] >> 1;
+
+        // this.data[idx + 3] = this.data[idx + 3] >> 1; # ignored
       }
     }
     this.pack().pipe(fs.createWriteStream(pathProcessed));
